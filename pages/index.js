@@ -195,6 +195,7 @@ export default function Home() {
 
 
     <div className="footer">
+
       <motion.span exit={{opacity:0}} className="text align-left align-y-bottom">
         <motion.h3
           exit={{opacity:0}}
@@ -202,12 +203,14 @@ export default function Home() {
         <a href="#" className="arrow">
           <motion.img exit={{opacity:0}} src="/arrow-link.svg" alt="Write e-mail" width="46px" />Mail</a>
       </motion.span>
+
       <motion.span exit={{opacity:0}} className="copy align-right align-y-bottom">
         &copy; 2020 all rights reserved
         <Link href="/imprint" scroll={false}>
         <a>Imprint</a> 
         </Link>
       </motion.span>
+      
     </div>
   
 

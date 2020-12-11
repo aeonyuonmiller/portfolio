@@ -170,6 +170,7 @@ h5 span { font-weight: 600; }
   .texto { width: calc(100% - 3em); left: 1.5em; }
 }
 
+/* viewing the projects on index */
 .view {
   position: sticky;
   padding: 5em;
@@ -185,11 +186,12 @@ h5 span { font-weight: 600; }
 .view h5 { margin-bottom: 8px; }
 .view span h5:first-child { margin-top: 0;}
 @media (max-width: 1050px) { 
-  .view { padding: 2em; z-index: 99; }
+  .view { padding: 2em; }
   .view h2 { font-size: 40px; margin-bottom: 4px; width: 70%; }
   .view .arrow { width: 50px; margin-bottom: -0.1em; margin-right: .25em; z-index: 20; }
 }
 
+/* showing the work */
 .show {
   display: flex;
   flex-wrap: wrap;
