@@ -163,8 +163,8 @@ export default function Home() {
         <motion.div className="parent centered align-x-center align-y-center view-image">
           <motion.img src="/beat-mode.png" alt="View work" />
         </motion.div>
-    </motion.div></a>
-    </Link>
+    </motion.div>
+    </a></Link>
 
 
 
@@ -188,7 +188,8 @@ export default function Home() {
       <div className="parent centered align-x-center align-y-center view-image">
         <img src="/inh.png" alt="View work" />
       </div>
-    </motion.div></a></Link>
+    </motion.div>
+    </a></Link>
 
 
 
@@ -210,7 +211,7 @@ export default function Home() {
         <a>Imprint</a> 
         </Link>
       </motion.span>
-      
+
     </div>
   
 
