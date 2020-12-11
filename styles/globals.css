@@ -64,6 +64,7 @@ a  { text-decoration: none; transition: all ease .3s; }
   padding: 5em;
   background: #ececec;
   height: 160vh;
+  width: 100%;
   display: flex;
   overflow: hidden;
   z-index: 1;
@@ -170,6 +171,7 @@ h5 span { font-weight: 600; }
 .view {
   padding: 5em;
   height: 100vh;
+  width: 100%;
   min-height: 500px;
   display: flex;
 }
