@@ -38,7 +38,7 @@ export default function Home() {
   });
 
   parallaxTl
-    .to('.portrait', {duration: 3, autoAlpha: 0.7, y: '+=120vh'})
+    .to('.portrait', {duration: 1, autoAlpha: 0, y: '+=120vh'})
     .to('h1', {duration: .8, autoAlpha: 0, y:"+=5"}, 0);
 }, [])
 
@@ -172,7 +172,7 @@ export default function Home() {
     <Link href="/insert-name-here" scroll={false}><a>
       <motion.div 
         className="view inh-hero" 
-        id="cool"
+        id="insert-name-here"
         initial={{ opacity:0 }}
         animate={{ opacity:1 }}
       >

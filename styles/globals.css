@@ -67,7 +67,7 @@ a  { text-decoration: none; transition: all ease .3s; }
   width: 100%;
   display: flex;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
 }
 
 .hero2 {
@@ -114,6 +114,7 @@ img .full {
   height: 90vh;
   width: auto;
   right: 0;
+  bottom: 0;
   object-fit: cover;
   z-index: 0;
 }
@@ -123,8 +124,8 @@ img .full {
 @media (max-width: 1100px) { 
   .hero { flex-direction: column; padding: 2em; }
   .hero img { height: 70vh; }
-  .portrait { position: absolute; left: 0; bottom: 0; height: auto; }
-  h1 { position: absolute; font-size: 2em; top: 30vh; left: 1.5em; }
+  .portrait { position: absolute; left: 0; bottom: 0; height: auto; z-index: 0; }
+  h1 { position: absolute; font-size: 1.8em; top: 5.6em; left: 1em; width: 280px; }
 }
 
 
@@ -170,11 +171,12 @@ h5 span { font-weight: 600; }
 }
 
 .view {
-  position: inherit;
+  position: sticky;
   padding: 5em;
   height: 100vh;
   width: 100%;
   min-height: 500px;
+  z-index: 5;
   display: flex;
 }
 
@@ -183,9 +185,9 @@ h5 span { font-weight: 600; }
 .view h5 { margin-bottom: 8px; }
 .view span h5:first-child { margin-top: 0;}
 @media (max-width: 1050px) { 
-  .view { padding: 2em; }
-  .view h2 { font-size: 40px; }
-  .view .arrow { height: 20px; margin-bottom: 9px; z-index: 20; }
+  .view { padding: 2em; z-index: 99; }
+  .view h2 { font-size: 40px; margin-bottom: 4px; width: 70%; }
+  .view .arrow { width: 50px; margin-bottom: -0.1em; margin-right: .25em; z-index: 20; }
 }
 
 .show {
@@ -240,7 +242,7 @@ h5 span { font-weight: 600; }
 
 .footer h3 { font-weight: 300; }
 .arrow { font-size: 4em; color: #282922; transition: all ease .6s; }
-.arrow img { opacity: .2; margin-right: 16px; transition: all ease .6s; }
+.arrow img { opacity: .2; margin-right: 16px; margin-left: 16px; transition: all ease .6s; }
 .arrow:hover img { opacity: .9; margin-right: 22px; transition: all ease-in-out .3s; }
 .copy { color: #ccc; font-size: 10px; letter-spacing: .05em; text-transform: uppercase; }
 .copy a { color: rgb(191, 191, 191); margin: 0 0 0 3em; }
@@ -251,8 +253,8 @@ h5 span { font-weight: 600; }
   .footer .text { position: relative; bottom: 3em; }
   .footer h3 { font-size: 30px; text-align: center;}
   .footer span.copy { align-self: center; }
-  .footer .arrow { font-size: 40px; align-self: center;}
-  .footer .arrow img { height: 30px; transform: translateX(-6px); margin-right: -8px; }
+  .footer .arrow { font-size: 40px; align-self: center; }
+  .footer .arrow img { height: 30px; transform: translateX(-6px); margin-right: .1em; }
 }
 
 
