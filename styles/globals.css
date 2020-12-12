@@ -54,6 +54,15 @@ h5 { font-size: 10px; font-weight: 300; color: #eeeeee; margin-left: 8px; margin
 p  { margin-bottom: 1em; font-size: 26px; line-height: 1.4em; font-weight: 300; color: #ececec; }
 a  { text-decoration: none; transition: all ease .3s; }
 
+.container {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .back-btn {
   position: fixed;
   display: flex;
@@ -197,7 +206,7 @@ h5 span { font-weight: 600; }
 .view {
   padding: 5em;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   min-height: 500px;
   z-index: 5;
   display: flex;

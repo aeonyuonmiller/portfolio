@@ -141,6 +141,7 @@ export default function Home() {
 
 
 
+  <div className="container">
 
         {/* card */}
         <Link href="/insert-name-here" scroll={false}><a>
@@ -167,7 +168,6 @@ export default function Home() {
 
 
 
-
     {/* card */}
     <Link href="/rhythm" scroll={false}>
       <a>
@@ -191,6 +191,8 @@ export default function Home() {
         </motion.div>
     </motion.div>
     </a></Link>
+
+  </div>
 
 
 
