@@ -13,12 +13,12 @@ html {
   /* border: .5px solid rgb(171, 180, 187); */
 }
 
-.light-bg { background: rgb(240,240,240); }
-.inh { background: rgb(20, 20, 30); }
-.inh-hero { background: rgb(0, 0, 10); }
-.rhym { background: rgb(53, 97, 121); }
-.rhym-hero { background: rgb(86, 151, 185); }
-.black { background: #000000; }
+.light-bg   { background: rgb(240,240,240); }
+.inh        { background: rgb(20, 20, 30); }
+.inh-hero   { background: rgb(0, 0, 10); }
+.rhym       { background: rgb(53, 97, 121); }
+.rhym-hero  { background: rgb(86, 151, 185); }
+.black      { background: #000000; }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul { margin: 0; padding: 0; font-weight: normal; letter-spacing: 0.022em;
 
@@ -195,7 +195,7 @@ h5 span { font-weight: 600; }
 
 /* viewing the projects on index */
 .view {
-  position: sticky;
+  position: relative;
   padding: 5em;
   height: 100vh;
   width: 100%;
