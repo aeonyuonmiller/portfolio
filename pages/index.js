@@ -142,6 +142,32 @@ export default function Home() {
 
 
 
+        {/* card */}
+        <Link href="/insert-name-here" scroll={false}><a>
+      <motion.div 
+        className="view inh-hero" 
+        id="insert-name-here"
+        initial={{ opacity:0 }}
+        animate={{ opacity:1 }}
+      >
+      <span className="align-left align-y-bottom">
+      <h5 className="">Motion</h5>
+      <h2 className="">Insert Name Here</h2>
+      </span>
+
+      <div className="align-x-right align-y-bottom arrow">
+        <motion.img animate={{ opacity: 1 }} exit={{ opacity: 0 }} src="/arrow-view.svg" alt="View work" />
+      </div>
+
+      <div className="parent centered align-x-center align-y-center view-image">
+        <img src="/inh.png" alt="View work" />
+      </div>
+    </motion.div>
+    </a></Link>
+
+
+
+
     {/* card */}
     <Link href="/rhythm" scroll={false}>
       <a>
@@ -163,31 +189,6 @@ export default function Home() {
         <motion.div className="parent centered align-x-center align-y-center view-image">
           <motion.img src="/beat-mode.png" alt="View work" />
         </motion.div>
-    </motion.div>
-    </a></Link>
-
-
-
-    {/* card */}
-    <Link href="/insert-name-here" scroll={false}><a>
-      <motion.div 
-        className="view inh-hero" 
-        id="insert-name-here"
-        initial={{ opacity:0 }}
-        animate={{ opacity:1 }}
-      >
-      <span className="align-left align-y-bottom">
-      <h5 className="">Motion</h5>
-      <h2 className="">Insert Name Here</h2>
-      </span>
-
-      <div className="align-x-right align-y-bottom arrow">
-        <motion.img animate={{ opacity: 1 }} exit={{ opacity: 0 }} src="/arrow-view.svg" alt="View work" />
-      </div>
-
-      <div className="parent centered align-x-center align-y-center view-image">
-        <img src="/inh.png" alt="View work" />
-      </div>
     </motion.div>
     </a></Link>
 

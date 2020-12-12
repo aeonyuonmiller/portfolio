@@ -60,7 +60,7 @@ a  { text-decoration: none; transition: all ease .3s; }
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  bottom: 15em;
+  top: 10em;
   left: 24%;
   width: 130px;
   height: 130px;
@@ -185,7 +185,7 @@ h5 span { font-weight: 600; }
 .panel p { font-size: 2.5vmax; color: rgba(250,250,250,0.6); min-width: 300px; max-width: 50%; line-height: 1.4em; }
 .panel img { object-fit: cover; }
 
-.texto { position: relative; left: 30%; width: 700px; top: 7vh; margin-bottom: 15em; }
+.texto { position: absolute; left: 30%; width: 700px; top: 40vh; margin-bottom: 20em; }
 .texto p { color: rgb(50, 50, 50); line-height: 1.46em; }
 .texto p span { font-weight: 400; color: rgb(159, 159, 159); }
 .texto h5 { left: -8px; color: #828282; margin-bottom: 8px; }

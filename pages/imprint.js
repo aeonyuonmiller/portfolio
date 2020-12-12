@@ -13,12 +13,6 @@ const variants = {
 
 export default function Home() {
 
-  const { scrollYProgress } = useViewportScroll()
-  const x = useTransform(scrollYProgress, [0, 1], [1, 1.2])
-  const scaleAnim = useTransform(scrollYProgress, [0, 1], [.8, 1.8])
-  const yPosAnim = useTransform(scrollYProgress, [0, 0.2, 1], [30, 800, 4000])
-
-
   return (
     <div className="flex">
       <Head>
@@ -34,9 +28,9 @@ export default function Home() {
           animate={{ y: 0 }} 
           exit={{ y: -80 }}
           transition={{ duration: .55, }}
-      className="back-btn" href="/">Go back</motion.a>
+      className="back-btn" href="/">Back</motion.a>
 
-      <div variants={{variants}} className="hero-short" style={{ scale: scaleAnim, }}>
+      <div variants={{variants}} className="hero-short">
 
         <motion.h1 
           initial={{ opacity: 0 }}
