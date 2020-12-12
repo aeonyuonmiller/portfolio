@@ -79,23 +79,6 @@ export default function Home() {
 
       </motion.div>
 
-
-
-
-
-
-      <div className="footer">
-        <span className="text align-left align-y-bottom">
-          <h5>Please ask questions via</h5>
-          <a href="#" className="arrow">
-            <img src="/arrow-link.svg" alt="Write e-mail" width="46px" />E-Mail</a>
-        </span>
-        <span className="copy align-right align-y-bottom">
-          &copy; 2020 all rights reserved 
-        </span>
-      </div>
-    
-
     </div>
   )
 }

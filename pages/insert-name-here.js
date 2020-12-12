@@ -111,7 +111,7 @@ export default function Project() {
             
 		    <motion.div 
 			      className="parent panel inh"
-			      animate={{ y: 'calc(-20vh + 1px)' }}
+			      animate={{ y: 'calc(-20vh + 1px)', skewY: ['-4deg', '2deg', '0deg'] }}
 			      exit={{ y: '100%' }}
           	transition={{ duration: .8, delay: 0 }}>
             <h5>Insert Name Here</h5>
