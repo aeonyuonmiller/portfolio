@@ -78,7 +78,7 @@ export default function Project() {
   return (
     <div className="flex scroll" exit={{ opacity: 0, y: '-100%' }}>
       <Head>
-        <title>/ project</title>
+        <title>/ insert-name-here</title>
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500&display=swap" rel="stylesheet"></link>
         <meta name="description" content="Description goes here" />
@@ -115,7 +115,7 @@ export default function Project() {
 			      exit={{ y: '100', skewY: ['0deg', '-4deg', '2deg', '0deg'] }}
           	transition={{ duration: .8, delay: 0 }}>
             <h5>Insert Name Here</h5>
-            <p>Highlighting people with different backgrounds who express their vision on culture. We discuss on YouTube about inclusive and empathic spaces.</p>
+            <p>Highlighting people with different backgrounds who express their vision on culture – we discuss on YouTube about inclusive and empathic spaces.</p>
         </motion.div>
 
       </div>

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 // import React, { useRef, useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Nav from '../components/Nav'
 import { motion } from "framer-motion";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -107,8 +108,6 @@ export default function Home() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head> 
 
-
-
     <div variants={{variants}} className="hero">
 
       <motion.h1 
@@ -134,12 +133,15 @@ export default function Home() {
         animate={{ y: '-20vh', scaleY: 1 }} 
         transition={{ duration: .9, delay: 0 }} 
         className="parent glass">
-          <h5 className="dark"><span>Mission</span></h5>
-          <p>I want to create smooth experiences for the web. Deliver information and services to the world.</p>
+          <p>Building seamless experiences with code and design</p>
+
+          <h5 className="grey"><span>Clients</span></h5>
+          <img width="300px" src="cmd1_6.gif" />
+
       </motion.section>
     </div>
 
-
+    <Nav></Nav>
 
   <div className="container">
 
