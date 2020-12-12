@@ -111,8 +111,8 @@ export default function Project() {
             
 		    <motion.div 
 			      className="parent panel inh"
-			      animate={{ y: 'calc(-20vh + 1px)', skewY: ['-4deg', '2deg', '0deg'], transition: { duration: 1.2, delay: .4 }  }}
-			      exit={{ y: '100', skewY: ['-4deg', '2deg', '0deg'] }}
+			      animate={{ y: 'calc(-20vh + 1px)', skewY: ['0deg', '-4deg', '0deg'], transition: { duration: .7, delay: .4 }  }}
+			      exit={{ y: '100', skewY: ['0deg', '-4deg', '2deg', '0deg'] }}
           	transition={{ duration: .8, delay: 0 }}>
             <h5>Insert Name Here</h5>
             <p>Highlighting people with different backgrounds who express their vision on culture. We discuss on YouTube about inclusive and empathic spaces.</p>

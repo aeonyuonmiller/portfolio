@@ -195,7 +195,6 @@ h5 span { font-weight: 600; }
 
 /* viewing the projects on index */
 .view {
-  position: relative;
   padding: 5em;
   height: 100vh;
   width: 100%;
