@@ -133,7 +133,7 @@ export default function Home() {
         animate={{ y: '-20vh', scaleY: 1 }} 
         transition={{ duration: .9, delay: 0 }} 
         className="parent glass">
-          <p>Building seamless experiences with code and design</p>
+          <p>Building experiences for e-commerce and websites</p>
 
           <h5 className="grey"><span>Clients</span></h5>
           <img width="300px" src="cmd1_6.gif" />
