@@ -66,6 +66,8 @@ export default function Project() {
         end: "top 5%"
       })
     })
+
+    ScrollTrigger.refresh();
   
     const images = gsap.utils.toArray('img');
     images.forEach((img, i) => {
@@ -162,7 +164,7 @@ export default function Project() {
           <p className="reveal">We talk about individual experiences to connect insight and emotions with ideas for possible change.​​​​​​​</p>
         </span>
 
-        <img src="beat-mode.png" alt="desc" className="shadow" />
+        <img src="beat-mode.png" alt="desc" />
 
         <img src="memo.jpg" alt="desc" className="shadow" />
 
