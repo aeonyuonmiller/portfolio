@@ -54,8 +54,6 @@ export default function Project() {
 
   useEffect(() => {
 
-    ScrollTrigger.refresh();
-
     const reveal = gsap.utils.toArray('.reveal');
     reveal.forEach((text, i) => {
       ScrollTrigger.create({
@@ -66,8 +64,6 @@ export default function Project() {
         end: "top 5%"
       })
     })
-
-    ScrollTrigger.refresh();
   
     const images = gsap.utils.toArray('img');
     images.forEach((img, i) => {
@@ -92,15 +88,18 @@ export default function Project() {
         // options: play, pause, resume, reset, restart, complete, reverse, none
         toggleActions: "restart none none reverse"
       }
-    });
-  
+    })
+      
     parallaxTl
       .to('.hero-middle', { duration: 2, autoAlpha: 0.2, y: '+=100' })
       .to('.back', {duration: 0.3, autoAlpha: 0, y: '-=30' }, 0);
+
+      ScrollTrigger.refresh();
+
   }, [])
 
   return (
-    <div className="flex scroll" exit={{ opacity: 0, y: '-100%' }}>
+    <div className="flex" exit={{ opacity: 0, y: '-100%' }}>
       <Head>
         <title>/ insert-name-here</title>
         <link rel="icon" href="/favicon.ico" />
