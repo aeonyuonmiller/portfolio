@@ -55,7 +55,27 @@ export default function Project() {
   useEffect(() => {
 
     ScrollTrigger.refresh();
+
+    const reveal = gsap.utils.toArray('.reveal');
+    reveal.forEach((text, i) => {
+      ScrollTrigger.create({
+        trigger: text,
+        toggleClass: 'active',
+        start: "top 90%",
+        end: "top 5%"
+      })
+    })
   
+    const images = gsap.utils.toArray('img');
+    images.forEach((img, i) => {
+      ScrollTrigger.create({
+        trigger: img,
+        toggleClass: 'active',
+        start: "top 95%",
+        end: "bottom 10%"
+      })
+    })
+
     const parallaxTl = gsap.timeline({
       ease: 'none',
       scrollTrigger: {
@@ -71,8 +91,8 @@ export default function Project() {
     });
   
     parallaxTl
-      .to('.hero-middle', { autoAlpha: 0.2, y: '+=100' })
-      .to('.back', {duration: .2, autoAlpha: 1, y: '-=150' }, 0);
+      .to('.hero-middle', { duration: 2, autoAlpha: 0.2, y: '+=100' })
+      .to('.back', {duration: 0.3, autoAlpha: 0, y: '-=30' }, 0);
   }, [])
 
   return (
@@ -92,8 +112,8 @@ export default function Project() {
           <motion.img 
           whileHover={{ opacity: 1, scale: 1.05, transition: { duration: .1, delay: 0, },}}
           whileTap={{ opacity: 0, }}
-          initial={{ opacity: 0, x: '2em', y: '2em' }}
-          animate={{ opacity: 0.8, x: '0em', y: '0em', transition: { duration: .4, delay: .9, }, }}
+          initial={{ opacity: 0, x: '0.5em', y: '0.5em' }}
+          animate={{ opacity: 0.8, x: '0em', y: '0em', transition: { duration: 1, delay: 0, }, }}
           exit={{ x: '-10em', y: '-10em', opacity: 0, transition: { duration: .2, } }}
           src="arrow-back.svg" 
           className="back" />
@@ -111,11 +131,11 @@ export default function Project() {
             
 		    <motion.div 
 			      className="parent panel inh"
-			      animate={{ y: 'calc(-20vh + 1px)', skewY: ['0deg', '-4deg', '0deg'], transition: { duration: .7, delay: .4 }  }}
-			      exit={{ y: '100', skewY: ['0deg', '-4deg', '2deg', '0deg'] }}
+			      animate={{ y: 'calc(-20vh + 1px)', skewY: ['0deg', '-3deg', '0deg'], transition: { duration: .8, delay: .2 }  }}
+			      exit={{ y: '300px', skewY: ['0deg', '3deg', '0deg'] }}
           	transition={{ duration: .8, delay: 0 }}>
-            <h5>Insert Name Here</h5>
-            <p>Highlighting people with different backgrounds who express their vision on culture – we discuss on YouTube about inclusive and empathic spaces.</p>
+            <h5 className="reveal">Insert Name Here</h5>
+            <p className="reveal">Highlighting people with different backgrounds who express their vision on culture – we discuss on YouTube about inclusive and empathic spaces.</p>
         </motion.div>
 
       </div>
@@ -125,8 +145,8 @@ export default function Project() {
       <section className="show inh light">
 
         <span>
-          <h5>Mission</h5>
-          <p>Give perspective on club culture from cultural workers.</p>
+          <h5 className="reveal">Mission</h5>
+          <p className="reveal">Give perspective on club culture from cultural workers.</p>
         </span>
 
         <img src="transCard.gif" style={{ width: '50%' }} alt="desc" />
@@ -136,8 +156,8 @@ export default function Project() {
         <img src="transCard.gif" alt="desc" />
 
         <span>
-          <h5>How</h5>
-          <p>We talk about individual experiences to connect insight and emotions with ideas for possible change.​​​​​​​</p>
+          <h5 className="reveal">How</h5>
+          <p className="reveal">We talk about individual experiences to connect insight and emotions with ideas for possible change.​​​​​​​</p>
         </span>
 
         <img src="beat-mode.png" alt="desc" className="shadow" />
@@ -154,7 +174,7 @@ export default function Project() {
       <div className="footer">
 
         <span className="text align-left align-y-bottom">
-          <h3>Let's work.</h3>
+          <h3 className="reveal">Let's work.</h3>
           <a href="#" className="arrow"><img src="/arrow-link.svg" alt="Write e-mail" width="46px" />Mail</a>
         </span>
 

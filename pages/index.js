@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 // import React, { useRef, useEffect, useState } from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import Nav from '../components/Nav'
 import { motion } from "framer-motion";
@@ -83,8 +84,8 @@ export default function Home() {
         const viewzTl = gsap.timeline( { 
           scrollTrigger: {
             trigger: elem,
-            start: "top top",
-            end: "bottom 10%",
+            start: "top 90%",
+            end: "top 20%",
             scrub: true,
             markers: false,
             clearProps: 'all',
@@ -133,10 +134,10 @@ export default function Home() {
         animate={{ y: '-20vh', scaleY: 1 }} 
         transition={{ duration: .9, delay: 0 }} 
         className="parent glass">
-          <p>Building experiences for e-commerce and websites</p>
+          <h5 className="black">Building experiences for e-commerce and websites</h5>
 
           <h5 className="grey"><span>Clients</span></h5>
-          <img width="300px" src="cmd1_6.gif" />
+          <Image width={300} height={300} src="/cmd1_6.gif" alt="Worked for Lufthansa, Jaguar, Suzuki, Range Rover" />
 
       </motion.section>
     </div>

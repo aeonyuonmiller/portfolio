@@ -23,11 +23,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head> 
 
+      <div className="bg-head"></div>
+
       <motion.a 
-          initial={{ y: -60 }}
-          animate={{ y: 0 }} 
-          exit={{ y: -80 }}
-          transition={{ duration: .55, }}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }} 
+          exit={{ scale: 0 }}
+          transition={{ duration: .3, delay: .6 }}
       className="back-btn" href="/">Back</motion.a>
 
       <div variants={{variants}} className="hero-short">
