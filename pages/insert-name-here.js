@@ -61,6 +61,7 @@ export default function Project() {
       ScrollTrigger.create({
         trigger: text,
         toggleClass: 'active',
+        clearProps: 'all',
         start: "top 90%",
         end: "top 5%"
       })
@@ -71,8 +72,9 @@ export default function Project() {
       ScrollTrigger.create({
         trigger: img,
         toggleClass: 'active',
-        start: "top 95%",
-        end: "bottom 10%"
+        clearProps: 'all',
+        start: "top 90%",
+        end: "bottom 5%"
       })
     })
 

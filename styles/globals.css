@@ -18,7 +18,7 @@ html {
   transform-origin: left;
   transform: scaleX(0);
   transition: .5s;
-  transition-delay: .5s;
+  transition-delay: .8s;
 }
 .reveal.active {
   transform: scaleX(1);
