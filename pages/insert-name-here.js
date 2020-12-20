@@ -73,7 +73,6 @@ export default function Project() {
         trigger: img,
         toggleClass: 'active',
         clearProps: 'all',
-        markers: true,
         start: "top 90%",
         end: "bottom 5%"
       })
