@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion, AnimatePresence, AnimateSharedLayout, useViewportScroll, useTransform } from "framer-motion";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+console.clear();
 gsap.registerPlugin(ScrollTrigger);
 
 const ease = [0.43, 0.13, 0.23, 0.96]
@@ -70,20 +71,18 @@ export default function Project() {
       ScrollTrigger.create({
         trigger: img,
         toggleClass: 'active',
-        clearProps: 'all',
         start: "top 90%",
         end: "bottom 5%"
       })
     })
 
     const parallaxTl = gsap.timeline({
-      ease: 'none',
+      ease: 'Power3.easeOut',
       scrollTrigger: {
         trigger: '.hero2',
         start: "top top",
         end: "center +=200",
-        scrub: true,
-        markers: false,
+        scrub: 0.3,
         // events: onEnter onLEave onEnterBack onLeaveBack
         // options: play, pause, resume, reset, restart, complete, reverse, none
         toggleActions: "restart none none reverse"

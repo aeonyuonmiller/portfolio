@@ -142,7 +142,7 @@ export default function Home() {
       </motion.section>
     </div>
 
-    <Nav></Nav>
+    {/* <Nav /> */}
 
   <div className="container">
 
