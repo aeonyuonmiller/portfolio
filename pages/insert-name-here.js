@@ -81,7 +81,7 @@ export default function Project() {
       scrollTrigger: {
         trigger: '.hero2',
         start: "top top",
-        end: "center +=200",
+        end: "bottom +=200",
         scrub: 0.3,
         // events: onEnter onLEave onEnterBack onLeaveBack
         // options: play, pause, resume, reset, restart, complete, reverse, none

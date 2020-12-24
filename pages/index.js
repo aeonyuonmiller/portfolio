@@ -84,6 +84,7 @@ export default function Home() {
         const viewzTl = gsap.timeline( { 
           scrollTrigger: {
             trigger: elem,
+            autoAlpha: 1,
             start: "top 90%",
             end: "top 20%",
             scrub: true,
@@ -134,15 +135,11 @@ export default function Home() {
         animate={{ y: '-20vh', scaleY: 1 }} 
         transition={{ duration: .9, delay: 0 }} 
         className="parent glass">
-          <h5 className="black">Building experiences for e-commerce and websites</h5>
-
           <h5 className="grey"><span>Clients</span></h5>
-          <Image width={300} height={300} src="/cmd1_6.gif" alt="Worked for Lufthansa, Jaguar, Suzuki, Range Rover" />
+          <img src="/clients.gif" alt="Worked for Lufthansa, Jaguar, Suzuki, Land Rover" />
 
       </motion.section>
     </div>
-
-    {/* <Nav /> */}
 
   <div className="container">
 
@@ -190,7 +187,7 @@ export default function Home() {
         </div>
 
         <motion.div className="parent centered align-x-center align-y-center view-image">
-          <motion.img src="/beat-mode.png" alt="View work" />
+          <img src="/beat-mode.png" alt="View work" />
         </motion.div>
     </motion.div>
     </a></Link>
