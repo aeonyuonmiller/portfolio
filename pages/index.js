@@ -59,7 +59,8 @@ export default function Home() {
        /* start: "+=60 40%",
        end: "+=200 20%", */
        start: "top center",
-       end: "bottom 10%+=10px",
+       end: "bottom 10%",
+       // end: "bottom 10%+=10px",
        scrub: true,
        markers: false,
        clearProps: 'all',
@@ -135,9 +136,8 @@ export default function Home() {
         animate={{ y: '-20vh', scaleY: 1 }} 
         transition={{ duration: .9, delay: 0 }} 
         className="parent glass">
-          <h5 className="grey"><span>Clients</span></h5>
           <img src="/clients.gif" alt="Worked for Lufthansa, Jaguar, Suzuki, Land Rover" />
-
+          <h5 className="grey"><span>Worked with</span></h5>
       </motion.section>
     </div>
 

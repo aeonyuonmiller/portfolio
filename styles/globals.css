@@ -232,7 +232,7 @@ section img.active {
 }
 h5 span { font-weight: 600; }
 .glass p { color: #252525; width: 60%; min-width: 400px; }
-.glass img { object-fit: cover; }
+.glass img { object-fit: cover; opacity: 1; width: 300px; margin-bottom: 50px; }
 
 .panel {
   position: absolute;
