@@ -68,13 +68,16 @@ export default function Project() {
   
     const images = gsap.utils.toArray('img');
     images.forEach((img, i) => {
+      ease: 'Power3.easeOut',
       ScrollTrigger.create({
         trigger: img,
         toggleClass: 'active',
         start: "top 90%",
         end: "bottom 5%"
-      })
+      }),"200"
     })
+
+
 
     const parallaxTl = gsap.timeline({
       ease: 'Power3.easeOut',
