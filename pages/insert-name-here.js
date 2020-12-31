@@ -74,7 +74,7 @@ export default function Project() {
         toggleClass: 'active',
         start: "top 90%",
         end: "bottom 5%"
-      }),"200"
+      }),200
     })
 
 
