@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { motion, AnimatePresence, AnimateSharedLayout, useViewportScroll, useTransform } from "framer-motion";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-console.clear();
 gsap.registerPlugin(ScrollTrigger);
 
 const ease = [0.43, 0.13, 0.23, 0.96]
@@ -131,7 +130,7 @@ export default function Project() {
          exit={{    y: -10, opacity: 0 }}
          transition={{ duration: .6, delay: 0.1 }}
         className="hero-middle" 
-        src="/inh.png" 
+        src="/inh-title.gif" 
         alt="hero img" />
             
 		    <motion.div 
@@ -156,12 +155,12 @@ export default function Project() {
 
         <img src="transCard.gif" style={{ width: '50%' }} alt="desc" />
 
-        <img src="memo.jpg" alt="desc" className="shadow" />
+        <img src="videocall.gif" alt="desc" className="shadow" />
 
-        <img src="transCard.gif" alt="desc" />
+        <img src="inh-title.gif" alt="desc" />
 
         <span>
-          <h5 className="reveal">How</h5>
+          <h5>How</h5>
           <p className="reveal">We talk about individual experiences to connect insight and emotions with ideas for possible change.​​​​​​​</p>
         </span>
 
