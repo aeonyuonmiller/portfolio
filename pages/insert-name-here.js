@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { useRouter } from "next/router";
 import Link from 'next/link'
+// import Footer from 'components/Footer'
 import { motion, AnimatePresence, AnimateSharedLayout, useViewportScroll, useTransform } from "framer-motion";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -52,6 +53,7 @@ const variants = {
 
 export default function Project() {
 
+
   useEffect(() => {
 
     const reveal = gsap.utils.toArray('.reveal');
@@ -84,7 +86,7 @@ export default function Project() {
         trigger: '.hero2',
         start: "top top",
         end: "bottom +=200",
-        scrub: 0.3,
+        scrub: 0.5,
         // events: onEnter onLEave onEnterBack onLeaveBack
         // options: play, pause, resume, reset, restart, complete, reverse, none
         toggleActions: "restart none none reverse"
@@ -155,37 +157,28 @@ export default function Project() {
 
         <img src="transCard.gif" style={{ width: '50%' }} alt="desc" />
 
-        <img src="videocall.gif" alt="desc" className="shadow" />
-
-        <img src="inh-title.gif" alt="desc" />
+        <img src="videocall.gif" alt="desc" />
 
         <span>
           <h5>How</h5>
           <p className="reveal">We talk about individual experiences to connect insight and emotions with ideas for possible change.​​​​​​​</p>
         </span>
 
-        <img src="beat-mode.png" alt="desc" />
-
-        <img src="memo.jpg" alt="desc" className="shadow" />
-
-        <img src="beat-mode.png" alt="desc" />
-
+        <img src="inh-title.gif" alt="desc" />
 
       </section>
 
-
-
       <div className="footer">
 
-        <span className="text align-left align-y-bottom">
-          <h3 className="reveal">Let's work.</h3>
+          <span className="text align-left align-y-bottom">
+          <h3>Let's work.</h3>
           <a href="#" className="arrow"><img src="/arrow-link.svg" alt="Write e-mail" width="46px" />Mail</a>
-        </span>
+          </span>
 
-        <span className="copy align-right align-y-bottom">
-          &copy; 2020 all rights reserved
+          <span className="copy align-right align-y-bottom">
+          &copy; 2021 All rights reserved.
           <a href="/imprint">Imprint</a> 
-        </span>
+          </span>
 
       </div>
     

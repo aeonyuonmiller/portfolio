@@ -42,7 +42,7 @@ html {
 
 .light-bg   { background: rgb(240,240,240); }
 .inh        { background: rgb(20, 20, 30); }
-.inh-hero   { background: rgb(0, 0, 10); }
+.inh-hero   { background: rgb(0, 0, 0); }
 .rhym       { background: rgb(53, 97, 121); }
 .rhym-hero  { background: rgb(86, 151, 185); }
 .black      { background: #000000; }
@@ -254,7 +254,7 @@ h5 span { font-weight: 600; }
   .texto { width: calc(100% - 3em); left: 1.5em; }
 }
 
-/* viewing the projects on index */
+/* viewing of projects in index */
 .view {
   padding: 5em;
   height: 100vh;
@@ -286,11 +286,11 @@ h5 span { font-weight: 600; }
 .show img {
   flex: 0 50%;
   object-fit: contain;
+  max-width: 1200px;
+  min-width: 30vw;
 }
 .shadow {
   border-radius: 2px;
-  max-height: 80vh;
-  margin: 5em 0;
   box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
               0 2px 2px rgba(0,0,0,0.11), 
               0 4px 4px rgba(0,0,0,0.11), 
@@ -299,7 +299,8 @@ h5 span { font-weight: 600; }
               0 32px 32px rgba(0,0,0,0.11);
 }
 .show span { 
-  max-width: 320px; 
+  max-width: 320px;
+  margin: 0 2.2em;
   flex: 0 50%; 
 }
 .show span h5 { 
@@ -327,7 +328,7 @@ h5 span { font-weight: 600; }
 
 .footer h3 { font-weight: 300; }
 .arrow { font-size: 4em; color: #282922; transition: all ease .6s; }
-.arrow img { opacity: .2; margin-right: 16px; margin-left: 16px; transition: all ease .6s; }
+.arrow img { opacity: .2; margin-right: 16px; transition: all ease .6s; }
 .arrow:hover img { opacity: .9; margin-right: 22px; transition: all ease-in-out .3s; }
 .copy { color: #ccc; font-size: 10px; letter-spacing: .05em; text-transform: uppercase; }
 .copy a { color: rgb(191, 191, 191); margin: 0 0 0 3em; }
