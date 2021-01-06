@@ -17,7 +17,6 @@ const variants = {
   exit:    { autoAlpha: 0 },
 }
 
-
 export default function Home() {
 
 // header
@@ -56,15 +55,13 @@ export default function Home() {
 
      scrollTrigger: {
        trigger: elem,
-       /* start: "+=60 40%",
-       end: "+=200 20%", */
-       start: "top center",
-       end: "bottom 10%",
+        start: "+=200 40%",
+       end: "+=200 20%",
+       /* start: "top center",
+       end: "bottom 10%", */
        // end: "bottom 10%+=10px",
        scrub: true,
-       markers: false,
-       clearProps: 'all',
-       toggleActions: "play reverse play reverse"
+       toggleActions: "play reset play reverse"
      }
   });
 
@@ -186,8 +183,8 @@ export default function Home() {
           <motion.img initial={{ opacity:0 }} animate={{ opacity:1 }} exit={{ opacity:0, y:'3em', x:'3em', transition: {duration: .5} }} src="/arrow-view.svg" alt="View work" />
         </div>
 
-        <motion.div className="parent centered align-x-center align-y-center view-image">
-          <img src="/beat-mode.png" alt="View work" />
+        <motion.div className="parent centered align-x-center align-y-center image-full">
+          <img src="/audiowave-on-the-run.gif" alt="View work" />
         </motion.div>
     </motion.div>
     </a></Link>

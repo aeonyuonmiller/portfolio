@@ -13,6 +13,22 @@ html {
   /* border: .5px solid rgb(171, 180, 187); */
 }
 
+.wrapper {
+  display: grid;
+  padding: 5em 0;
+  grid-template-columns:
+    1fr
+    min(65ch, 100%)
+    1fr;
+}
+.wrapper > * {
+  grid-column: 2;
+}
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / 4;
+}
+
 .reveal {
   position: relative;
   transform-origin: left;
@@ -43,7 +59,7 @@ html {
 .light-bg   { background: rgb(240,240,240); }
 .inh        { background: rgb(20, 20, 30); }
 .inh-hero   { background: rgb(0, 0, 0); }
-.rhym       { background: rgb(53, 97, 121); }
+.rhym       { background: rgb(53, 97, 141); }
 .rhym-hero  { background: rgb(86, 151, 185); }
 .black      { background: #000000; }
 
@@ -208,7 +224,7 @@ section img.active {
 @media (max-width: 1100px) { 
   .hero { flex-direction: column; padding: 2em; }
   .hero img { height: 70vh; }
-  .portrait { position: absolute; left: 0; bottom: 0; height: auto; z-index: 0; }
+  .portrait { position: sticky; left: 0; bottom: 0; height: 90vh; width: 500px; z-index: 0; }
   h1 { position: absolute; font-size: 1.8em; top: 5.6em; left: 1em; width: 280px; }
 }
 
@@ -264,7 +280,15 @@ h5 span { font-weight: 600; }
   display: flex;
 }
 
-.view img { max-height: 60vh; }
+.image-full img {
+  position: sticky;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.view img { max-height: 100vh; }
 .view .centered { width: 100%; position: absolute; left: 0; z-index: 10; }
 .view h5 { margin-bottom: 8px; }
 .view span h5:first-child { margin-top: 0;}
@@ -281,11 +305,12 @@ h5 span { font-weight: 600; }
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0 5em 6em 5em;
+  padding: 0 5em 3em 5em;
 }
 .show img {
   flex: 0 50%;
   object-fit: contain;
+  height: auto;
   max-width: 1200px;
   min-width: 30vw;
 }
@@ -327,7 +352,7 @@ h5 span { font-weight: 600; }
 .off { background: #efefef; }
 
 .footer h3 { font-weight: 300; }
-.arrow { font-size: 4em; color: #282922; transition: all ease .6s; }
+.arrow { font-size: 4em; color: #282922; transition: all ease .6s; z-index: 50;  }
 .arrow img { opacity: .2; margin-right: 16px; transition: all ease .6s; }
 .arrow:hover img { opacity: .9; margin-right: 22px; transition: all ease-in-out .3s; }
 .copy { color: #ccc; font-size: 10px; letter-spacing: .05em; text-transform: uppercase; }
