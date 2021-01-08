@@ -113,7 +113,7 @@ function useWindowSize() {
         toggleClass: 'active',
         start: "top 90%",
         end: "bottom 5%"
-      }),200
+      }),150
     })
 
 
@@ -209,7 +209,7 @@ function useWindowSize() {
       <div className="footer">
 
           <span className="text align-left align-y-bottom">
-          <h3>Let's work.</h3>
+          <h3>Let's work</h3>
           <a href="#" className="arrow"><img src="/arrow-link.svg" alt="Write e-mail" width="46px" />Mail</a>
           </span>
 

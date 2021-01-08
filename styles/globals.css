@@ -193,13 +193,13 @@ section img {
   opacity: 0;
   transform: translateY(50px);
   transform-origin: center center;
-  transition: all ease .3s; 
+  transition: all ease .8s; 
 }
 
 section img.active {
   transform: translateY(0);
   opacity: 1;
-  transition: all ease .8s;
+  transition: all ease .4s;
 }
 
 .back {
