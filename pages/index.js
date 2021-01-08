@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react'
-// import React, { useRef, useEffect, useState } from 'react'
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-// import Footer from 'components/Footer.js'
+import React, { useEffect } from 'react';
+// import React, { useRef, useEffect, useState } from 'react';
+import Head from 'next/head';
+import dynamic from 'next/dynamic';
+const gsap = dynamic(()=>{return import("gsap/dist/gsap")}, {ssr: false});
+import Link from 'next/link';
+// import Footer from 'components/Footer.js';
 import { motion } from "framer-motion";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -117,7 +118,7 @@ export default function Home() {
         transition={{ duration: 1, }}
         // variants={variants}
         className="align-left align-y-bottom">
-        <span>aeonyuonmiller</span> is a multidisciplinary digital designer
+        <span>aeon yuon miller</span> is an experience designer
       </motion.h1>
 
       <motion.img
@@ -195,7 +196,7 @@ export default function Home() {
     <div className="footer">
 
       <span className="text align-left align-y-bottom">
-      <h3>Let's work.</h3>
+      <h3>Let's work</h3>
       <a href="#" className="arrow"><img src="/arrow-link.svg" alt="Write e-mail" width="46px" />Mail</a>
       </span>
 

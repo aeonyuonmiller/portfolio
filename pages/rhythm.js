@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import Head from 'next/head'
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 import { useRouter } from "next/router";
-import Link from 'next/link'
-// import Footer from 'components/Footer'
+import Link from 'next/link';
+// import Footer from 'components/Footer';
 import { motion, AnimatePresence, AnimateSharedLayout, useViewportScroll, useTransform } from "framer-motion";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
