@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import { useRouter } from "next/router";
 import Link from 'next/link';
 // import Footer from 'components/Footer';
@@ -149,8 +150,7 @@ function useWindowSize() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head> 
 
-
-      <div className="hero2 rhym-hero" layout>
+      <div className="hero2 rhym-hero">
             
         <Link href="/" scroll={false}><a>
           <motion.img 
@@ -163,14 +163,15 @@ function useWindowSize() {
           className="back" />
         </a></Link>
 
-        <motion.img
-        layout
+        <Image
+        priority
+        layout="fill"
          initial={{ y: 10, opacity: 0 }}
          animate={{ y: 0, opacity: 1, }}
          exit={{    y: -10, opacity: 0 }}
          transition={{ duration: .6, delay: 0.1 }}
         className="hero-middle image-full" 
-        src="audiowave-on-the-run.gif" 
+        src="/audiowave-on-the-run.gif" 
         alt="hero img" />
             
 		    <motion.div 

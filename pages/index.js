@@ -2,9 +2,7 @@ import React, { useEffect } from 'react';
 // import React, { useRef, useEffect, useState } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-const gsap = dynamic(()=>{return import("gsap/dist/gsap")}, {ssr: false});
 import Link from 'next/link';
-// import Footer from 'components/Footer.js';
 import { motion } from "framer-motion";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -73,7 +71,7 @@ export default function Home() {
   })
 
 
-  // view-image
+// view-image
    useEffect(() => {
 
     ScrollTrigger.refresh();
@@ -118,7 +116,7 @@ export default function Home() {
         transition={{ duration: 1, }}
         // variants={variants}
         className="align-left align-y-bottom">
-        <span>aeon yuon miller</span> is an experience designer
+        <span>aeonyuonmiller</span> is a multidisciplinary digital designer
       </motion.h1>
 
       <motion.img

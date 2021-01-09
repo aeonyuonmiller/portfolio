@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import { useRouter } from "next/router";
 import Link from 'next/link';
 // import Footer from 'components/Footer';
@@ -91,16 +92,6 @@ function useWindowSize() {
 
   /*  WORKING JS  */
 
-/*   useEffect(() => {
-    // Create an scoped async function in the hook
-    async function anyNameFunction() {
-      await loadContent();
-    }
-    // Execute the created function directly
-    anyNameFunction();
-  }, []); */
-
-
   useEffect(() => {
 
     const reveal = gsap.utils.toArray('.reveal');
@@ -124,8 +115,6 @@ function useWindowSize() {
         end: "bottom 5%"
       }),150
     })
-
-
 
     const parallaxTl = gsap.timeline({
       ease: 'Power3.easeOut',
@@ -172,8 +161,9 @@ function useWindowSize() {
           className="back" />
         </a></Link>
 
-        <motion.img
-        layout
+        <Image
+        priority
+        layout="fill"
          initial={{ y: 10, opacity: 0 }}
          animate={{ y: 0, opacity: 1, }}
          exit={{    y: -10, opacity: 0 }}
@@ -187,7 +177,7 @@ function useWindowSize() {
 			      animate={{ y: 'calc(-20vh + 1px)', skewY: ['0deg', '-3deg', '0deg'], transition: { duration: .8, delay: .2 }  }}
 			      exit={{ y: '300px', skewY: ['0deg', '3deg', '0deg'] }}
           	transition={{ duration: .8, delay: 0 }}>
-            <h5 className="reveal">Insert Name Here</h5>
+            <h5>Insert Name Here</h5>
             <p className="reveal">Highlighting people with different backgrounds who express their vision on culture – we discuss on YouTube about inclusive and empathic spaces.</p>
         </motion.div>
 
@@ -198,7 +188,7 @@ function useWindowSize() {
       <section className="show inh light">
 
         <span>
-          <h5 className="reveal">Mission</h5>
+          <h5>Mission</h5>
           <p className="reveal">Give perspective on club culture from cultural workers.</p>
         </span>
 

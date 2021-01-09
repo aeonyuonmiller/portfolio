@@ -60,7 +60,7 @@ html {
 .light-bg   { background: rgb(240,240,240); }
 .inh        { background: rgb(20, 20, 30); }
 .inh-hero   { background: rgb(0, 0, 0); }
-.rhym       { background: rgb(53, 97, 141); }
+.rhym       { background: rgb(0, 60, 255); }
 .rhym-hero  { background: rgb(86, 151, 185); }
 .black      { background: #000000; }
 
@@ -75,7 +75,7 @@ img {
   height: auto;
 }
 
-h1 { width: 400px; font-weight: 300; font-size: 2.5em; letter-spacing: .01em; line-height: 1.3em; color: #282922; }
+h1 { width: 380px; font-weight: 300; font-size: 2.5em; letter-spacing: .01em; line-height: 1.3em; color: #282922; }
 h1 span { font-weight: 500; font-size: 1em; color: #b8b8b8;
 /*   background: radial-gradient(circle, #b8b8b8 10%, #747474 90%);
   background-clip: text;
