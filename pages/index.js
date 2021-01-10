@@ -54,8 +54,8 @@ export default function Home() {
 
      scrollTrigger: {
        trigger: elem,
-        start: "+=200 40%",
-       end: "+=200 20%",
+       start: "+=200 40%",
+       // end: "+=200 20%",
        /* start: "top center",
        end: "bottom 10%", */
        // end: "bottom 10%+=10px",

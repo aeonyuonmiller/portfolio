@@ -101,7 +101,7 @@ function useWindowSize() {
         toggleClass: 'active',
         clearProps: 'all',
         start: "top 90%",
-        end: "top 5%"
+        // end: "top 5%"
       })
     })
   
@@ -112,7 +112,7 @@ function useWindowSize() {
         trigger: img,
         toggleClass: 'active',
         start: "top 80%",
-        end: "bottom 5%"
+        // end: "bottom 5%"
       }),100
     })
 
@@ -123,7 +123,7 @@ function useWindowSize() {
       scrollTrigger: {
         trigger: '.hero2',
         start: "top top",
-        end: "bottom +=200",
+        // end: "bottom +=200",
         scrub: 0.5,
         // events: onEnter onLEave onEnterBack onLeaveBack
         // options: play, pause, resume, reset, restart, complete, reverse, none
@@ -163,15 +163,15 @@ function useWindowSize() {
         </a></Link>
 
         <Image
-        priority
-        layout="fill"
+         priority
+         layout="fill"
          initial={{ y: 10, opacity: 0 }}
          animate={{ y: 0, opacity: 1, }}
          exit={{    y: -10, opacity: 0 }}
          transition={{ duration: .6, delay: 0.1 }}
-        className="hero-middle image-full" 
-        src="/audiowave-on-the-run.gif" 
-        alt="hero img" />
+         className="hero-middle image-full" 
+         src="/audiowave-on-the-run.gif" 
+         alt="Type animation On the run with soundwave" />
             
 		    <motion.div 
 			      className="parent panel rhym"
@@ -184,8 +184,9 @@ function useWindowSize() {
 
       </div>
 
+      {/* <section className="wrapper rhym"> */}
 
-      <section className="wrapper rhym">
+      <section className="show rhym">
 
         <span>
           <h5 className="reveal">Mission</h5>

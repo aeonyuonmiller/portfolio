@@ -100,7 +100,7 @@ function useWindowSize() {
         toggleClass: 'active',
         clearProps: 'all',
         start: "top 90%",
-        end: "top 5%"
+        // end: "top 5%"
       })
     })
   
@@ -111,7 +111,7 @@ function useWindowSize() {
         trigger: img,
         toggleClass: 'active',
         start: "top 90%",
-        end: "bottom 5%"
+        // end: "bottom 5%"
       }),150
     })
 
@@ -120,7 +120,7 @@ function useWindowSize() {
       scrollTrigger: {
         trigger: '.hero2',
         start: "top top",
-        end: "bottom +=200",
+        // end: "bottom +=200",
         scrub: 0.5,
         // events: onEnter onLEave onEnterBack onLeaveBack
         // options: play, pause, resume, reset, restart, complete, reverse, none

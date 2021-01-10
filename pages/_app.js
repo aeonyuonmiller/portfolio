@@ -11,7 +11,7 @@ class MyApp extends App {
    * Handle scrolling gracefully, since next/router scrolls to top
    * before exit animation is complete.
    *
-   * Note that next/link components should also be using `scroll={false}`
+   * next/link components should be using `scroll={false}`
    **/
   handleExitComplete () {
     if (typeof window !== 'undefined') {
