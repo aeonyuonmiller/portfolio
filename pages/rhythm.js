@@ -195,15 +195,15 @@ function useWindowSize() {
 
         <img src="on-the-run-typo.gif" className="full-bleed" alt="desc" />
 
-        <img src="beat-mode.png" alt="desc" />
+        <img src="beat-mode.png" className="full-bleed" alt="desc" />
 
-        <img src="audiowave-on-the-run.gif" alt="" />
+        <img src="audiowave-on-the-run.gif" className="full-bleed" alt="desc" />
 
         <span>
           <h5>Beat Mode</h5>
           <p className="reveal">Select samples and edit patterns​​​​​​​</p>
         </span>
-        <img src="beat-mode.png" alt="desc" />
+        <img src="beat-mode.png" className="full-bleed" alt="desc" />
 
         <img src="beat-mode.png" alt="desc" />
         <span>
