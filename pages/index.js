@@ -157,7 +157,7 @@ export default function Home() {
       </div>
 
       <div className="parent centered align-x-center align-y-center view-image">
-        <img src="/inh-title.gif" alt="View work" />
+        <img src="/inh-title.gif" alt="View project Insert Name Here" />
       </div>
     </motion.div>
     </a></Link>

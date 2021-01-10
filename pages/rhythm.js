@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from "next/router";
 import Link from 'next/link';
-// import Footer from 'components/Footer';
 import { motion, AnimatePresence, AnimateSharedLayout, useViewportScroll, useTransform } from "framer-motion";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
