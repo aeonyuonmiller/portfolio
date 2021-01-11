@@ -31,9 +31,9 @@ export default function Home() {
       // elem / viewport
       start: "top top",
       end: "center +=200",
-      scrub: true,
+      scrub: .3,
       pin: true,
-      pinSpacing: true,
+      pinSpacing: false,
       markers: false,
       // events: onEnter onLEave onEnterBack onLeaveBack
       // options: play, pause, resume, reset, restart, complete, reverse, none
@@ -42,7 +42,7 @@ export default function Home() {
   });
 
   parallaxTl
-    .to('.portrait', {duration: 1, autoAlpha: 0, y: '+=120vh'})
+    .to('.portrait', {duration: 1, autoAlpha: 0, y: '+=110vh'})
     .to('h1', {duration: .25, autoAlpha: 0, y:"-=30"}, 0);
 }, [])
 
@@ -59,13 +59,13 @@ export default function Home() {
      scrollTrigger: {
        trigger: elem,
        // elem / viewport
-       start: "top 80%",
+       start: "center 90%",
        end: "top 10%",
        markers: false,
-       scrub: 1,
+       scrub: false,
        // events: onEnter onLEave onEnterBack onLeaveBack
        // options: play, pause, resume, reset, restart, complete, reverse, none
-       toggleActions: "play reverse none reverse"
+       toggleActions: "restart reverse none reverse"
      }
   });
 
