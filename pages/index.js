@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import Scroll from "../components/Scroll";
 import { motion } from "framer-motion";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -110,8 +109,6 @@ export default function Home() {
     </Head> 
 
     <div variants={{variants}} className="hero">
-      
-      <Scroll />
 
       <motion.h1 
         initial={{ y: '20vh', opacity: 0 }}
