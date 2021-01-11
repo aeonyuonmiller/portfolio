@@ -65,7 +65,7 @@ export default function Home() {
        scrub: false,
        // events: onEnter onLEave onEnterBack onLeaveBack
        // options: play, pause, resume, reset, restart, complete, reverse, none
-       toggleActions: "restart reverse none reverse"
+       toggleActions: "restart reset restart reverse"
      }
   });
 
