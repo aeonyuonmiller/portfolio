@@ -3,10 +3,12 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import Scroll from "../components/Scroll";
 import { motion } from "framer-motion";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const ease = [0.43, 0.13, 0.23, 0.96]
 
@@ -108,6 +110,8 @@ export default function Home() {
     </Head> 
 
     <div variants={{variants}} className="hero">
+      
+      <Scroll />
 
       <motion.h1 
         initial={{ y: '20vh', opacity: 0 }}
