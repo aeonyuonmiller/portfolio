@@ -95,7 +95,7 @@ h1 span { font-weight: 500; font-size: 1em; color: #b8b8b8;
 h2 { font-size: 4em; line-height: 1em; color: #efefef; letter-spacing: -.001em; }
 h3 { font-size: 3em; color: rgba(0,0,0,.15); }
 h5 { font-size: 10px; font-weight: 300; color: #eeeeee; margin-left: 8px; margin-top: 40px; letter-spacing: .3em; text-transform: uppercase; }
-p  { margin-bottom: 1em; font-size: 26px; line-height: 1.4em; font-weight: 300; color: #ececec; }
+p  { margin-bottom: 1em; font-size: 26px; line-height: 1.4em; font-weight: 100; color: #ececec; }
 a  { text-decoration: none; transition: all ease .3s; }
 
 .container {

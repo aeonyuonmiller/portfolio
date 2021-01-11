@@ -8,14 +8,6 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-import dynamic from "next/dynamic";
-
-const Scroll = dynamic(
-  () => {
-    return import("../components/Scroll");
-  },
-  { ssr: false }
-);
 
 const ease = [0.43, 0.13, 0.23, 0.96]
 
@@ -241,8 +233,6 @@ function useWindowSize() {
           </span>
 
       </div>
-
-      <Scroll />
     
     </div>
   )

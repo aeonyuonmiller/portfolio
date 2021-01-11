@@ -28,9 +28,12 @@ export default function Home() {
     ease: 'none',
     scrollTrigger: {
       trigger: 'header',
+      // elem / viewport
       start: "top top",
       end: "center +=200",
       scrub: true,
+      pin: true,
+      pinSpacing: true,
       markers: false,
       // events: onEnter onLEave onEnterBack onLeaveBack
       // options: play, pause, resume, reset, restart, complete, reverse, none
@@ -51,26 +54,25 @@ export default function Home() {
     var headlines = gsap.utils.toArray("h2, h3, h5, .arrow");
     headlines.forEach((elem, i) => {
   
-    const tl = gsap.timeline( { 
+    const tl = gsap.timeline({ 
 
      scrollTrigger: {
        trigger: elem,
-       start: "center 90%",
-       end: "bottom 10%",
-       markers: true,
-       /* start: "top center",
-       end: "bottom 10%", */
-       // end: "bottom 10%+=10px",
-       scrub: false,
-       toggleActions: "play reverse play reverse"
+       // elem / viewport
+       start: "top 80%",
+       end: "top 10%",
+       markers: false,
+       scrub: 1,
+       // events: onEnter onLEave onEnterBack onLeaveBack
+       // options: play, pause, resume, reset, restart, complete, reverse, none
+       toggleActions: "play reverse none reverse"
      }
   });
 
-   tl
-     .from(elem, { autoAlpha: 0, y: 20, duration: 0.3 })
+   tl.from(elem, { autoAlpha: 0, y: 20, duration: 0.3 })
      .to(elem, { autoAlpha: 1, y: 0, duration: 0.4 })
      .to(elem, { autoAlpha: 1, y: 0, duration: 0.8 })
-     .to(".arrow", { delay: 1 }, 0.4 );
+     .to(".arrow", { delay: .2 }, 0.4 );
     });
   })
 

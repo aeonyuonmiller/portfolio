@@ -2,6 +2,14 @@ import React, { useRouter } from 'react';
 import App, { Container } from 'next/app';
 import '../styles/globals.css';
 import { AnimatePresence } from 'framer-motion';
+import dynamic from "next/dynamic";
+
+const Scroll = dynamic(
+  () => {
+    return import("../components/Scroll");
+  },
+  { ssr: false }
+);
 
 
 class MyApp extends App {
@@ -18,6 +26,8 @@ class MyApp extends App {
     }
   }
 
+
+
   render() {
     const { Component, pageProps, router } = this.props;
 
@@ -25,7 +35,8 @@ class MyApp extends App {
       <>
           <AnimatePresence 
             exitBeforeEnter 
-            onExitComplete={this.handleExitComplete}>  
+            onExitComplete={this.handleExitComplete}> 
+            <Scroll />
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
       </>
