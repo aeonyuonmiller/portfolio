@@ -1,9 +1,7 @@
 import React, { useRouter } from 'react';
 import App, { Container } from 'next/app';
-import Scroll from "../components/Scroll";
 import '../styles/globals.css';
 import { AnimatePresence } from 'framer-motion';
-// import { useRouter } from 'next/dist/client/router'
 
 
 class MyApp extends App {
@@ -29,7 +27,6 @@ class MyApp extends App {
             exitBeforeEnter 
             onExitComplete={this.handleExitComplete}>  
             <Component {...pageProps} key={router.route} />
-            <Scroll />
           </AnimatePresence>
       </>
       );
