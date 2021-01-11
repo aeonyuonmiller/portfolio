@@ -57,7 +57,7 @@ export default function Home() {
        trigger: elem,
        start: "center 90%",
        end: "bottom 10%",
-       markers: false,
+       markers: true,
        /* start: "top center",
        end: "bottom 10%", */
        // end: "bottom 10%+=10px",
