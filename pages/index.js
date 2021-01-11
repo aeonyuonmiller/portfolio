@@ -55,19 +55,22 @@ export default function Home() {
 
      scrollTrigger: {
        trigger: elem,
-       start: "+=200 40%",
-       // end: "+=200 20%",
+       start: "center 90%",
+       end: "bottom 10%",
+       markers: false,
        /* start: "top center",
        end: "bottom 10%", */
        // end: "bottom 10%+=10px",
-       scrub: true,
-       toggleActions: "play reset play reverse"
+       scrub: false,
+       toggleActions: "play reverse play reverse"
      }
   });
 
    tl
+     .from(elem, { autoAlpha: 0, y: 20, duration: 0.3 })
      .to(elem, { autoAlpha: 1, y: 0, duration: 0.4 })
-     .to(elem, { autoAlpha: 0, y: -20, duration: 0.2 }, 0.2 );
+     .to(elem, { autoAlpha: 1, y: 0, duration: 0.8 })
+     .to(".arrow", { delay: 1 }, 0.4 );
     });
   })
 
