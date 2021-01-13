@@ -46,7 +46,7 @@ useEffect(() => {
 
 
 // HELPERS
-   useEffect((innerWidth, innerHeight) => {
+   useEffect(() => {
 
     var headlines = gsap.utils.toArray("h2, h3, h5, .arrow, .copy");
     headlines.forEach((elem, i) => {

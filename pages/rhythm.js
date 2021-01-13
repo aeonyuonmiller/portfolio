@@ -135,7 +135,7 @@ function useWindowSize() {
     })
       
     parallaxTl
-      .to('.hero-middle', { duration: 2, y: '+=100' })
+      .to('.hero-middle', { duration: 2, y: '+=500' })
       .to('.back', {duration: 0.3, autoAlpha: 0, y: '-=30' }, 0);
 
       ScrollTrigger.refresh();
@@ -152,7 +152,7 @@ function useWindowSize() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head> 
 
-      <div className="hero2 rhym-hero">
+      <div className="hero rhym-hero">
             
         <Link href="/" scroll={false}><a>
           <motion.img 
