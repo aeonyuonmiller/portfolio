@@ -19,10 +19,8 @@ const variants = {
 
 export default function Home() {
 
-// header
-  useEffect(() => {
-
-  ScrollTrigger.refresh();
+// HEADER
+useEffect(() => {
 
   const parallaxTl = gsap.timeline({
     ease: 'none',
@@ -31,7 +29,7 @@ export default function Home() {
       // elem / viewport
       start: "top top",
       end: "center +=200",
-      scrub: .3,
+      scrub: true,
       pin: true,
       pinSpacing: false,
       markers: false,
@@ -47,11 +45,11 @@ export default function Home() {
 }, [])
 
 
-// helpers h2, h3, h5, .arrow
+// HELPERS
    useEffect(() => {
 
-    ScrollTrigger.refresh();
-    var headlines = gsap.utils.toArray("h2, h3, h5, .arrow");
+    ScrollTrigger.refresh(true);
+    var headlines = gsap.utils.toArray("h2, h3, h5, .arrow, .copy");
     headlines.forEach((elem, i) => {
   
     const tl = gsap.timeline({ 
@@ -59,25 +57,22 @@ export default function Home() {
      scrollTrigger: {
        trigger: elem,
        // elem / viewport
-       start: "center 90%",
+       start: "top 95%",
        end: "top 10%",
-       markers: false,
-       scrub: false,
-       // events: onEnter onLEave onEnterBack onLeaveBack
+       // events: onEnter onLeave onEnterBack onLeaveBack
        // options: play, pause, resume, reset, restart, complete, reverse, none
-       toggleActions: "restart reset restart reverse"
+       toggleActions: "restart reverse restart reverse"
      }
   });
 
-   tl.from(elem, { autoAlpha: 0, y: 20, duration: 0.3 })
+   tl.from(elem, { autoAlpha: 0, y: 30 })
      .to(elem, { autoAlpha: 1, y: 0, duration: 0.4 })
-     .to(elem, { autoAlpha: 1, y: 0, duration: 0.8 })
-     .to(".arrow", { delay: .2 }, 0.4 );
+     .to(".arrow", { delay: 1.5 });
     });
-  })
+  }, [])
 
 
-// view-image
+// VIEW IMAGE
    useEffect(() => {
 
     ScrollTrigger.refresh();
@@ -101,7 +96,7 @@ export default function Home() {
      .to(elem, { y: 0 })
      .to(elem, { y: -50 });
     });
-  })
+  }, [])
 
 
   return (
