@@ -46,14 +46,13 @@ useEffect(() => {
 
 
 // HELPERS
-   useEffect(() => {
+   useEffect((innerWidth, innerHeight) => {
 
     ScrollTrigger.refresh(true);
     var headlines = gsap.utils.toArray("h2, h3, h5, .arrow, .copy");
     headlines.forEach((elem, i) => {
   
     const tl = gsap.timeline({ 
-
      scrollTrigger: {
        trigger: elem,
        // elem / viewport
@@ -67,7 +66,8 @@ useEffect(() => {
 
    tl.from(elem, { autoAlpha: 0, y: 30 })
      .to(elem, { autoAlpha: 1, y: 0, duration: 0.4 })
-     .to(".arrow", { delay: 1.5 });
+     .to(".arrow", { delay: 1.5 })
+     .to(".copy", { delay: 1.5 });
     });
   }, [])
 
@@ -111,10 +111,10 @@ useEffect(() => {
     <div variants={{variants}} className="hero">
 
       <motion.h1 
-        initial={{ y: '20vh', opacity: 0 }}
+        initial={{ y: '0vh', opacity: 0 }}
         animate={{ y: ['0vh', '-20vh'], opacity: 1 }} 
         exit={{ opacity: 0 }}
-        transition={{ duration: 1, }}
+        transition={{ duration: .6, }}
         // variants={variants}
         className="align-left align-y-bottom">
         <span>aeonyuonmiller</span> is a multidisciplinary digital designer
@@ -131,7 +131,7 @@ useEffect(() => {
       <motion.section
         initial={{ y: '0vh', scaleY: .5 }}
         animate={{ y: '-20vh', scaleY: 1 }} 
-        transition={{ duration: .9, delay: 0 }} 
+        transition={{ duration: .9, delay: 0.1 }} 
         className="parent glass">
           <img src="/clients.gif" alt="Worked for Lufthansa, Jaguar, Suzuki, Land Rover" />
           <h5 className="grey"><span>Worked with</span></h5>

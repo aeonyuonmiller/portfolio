@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from "next/router";
@@ -56,7 +56,7 @@ const variants = {
 
 export default function RHYM() {
 
-// make gsap work smooth
+/* // make gsap work smooth
   const handleScroll = () => {}
   useEffect(() => {
   window.addEventListener('scroll', handleScroll);
@@ -93,7 +93,7 @@ function useWindowSize() {
     }
   }, []); // Empty array ensures effect is only run on mount
   return windowSize;
-}
+} */
 
 
   /*  WORKING JS  */
@@ -103,12 +103,12 @@ function useWindowSize() {
 
     const reveal = gsap.utils.toArray('.reveal');
     reveal.forEach((text, i) => {
+        ease: 'Power3.easeOut',
       ScrollTrigger.create({
         trigger: text,
         toggleClass: 'active',
         clearProps: 'all',
         start: "top 90%",
-        // end: "top 5%"
       })
     })
   
@@ -119,18 +119,14 @@ function useWindowSize() {
         trigger: img,
         toggleClass: 'active',
         start: "top 80%",
-        // end: "bottom 5%"
       }),100
     })
-
-
 
     const parallaxTl = gsap.timeline({
       ease: 'Power3.easeOut',
       scrollTrigger: {
         trigger: '.hero2',
         start: "top top",
-        // end: "bottom +=200",
         scrub: 0.5,
         // events: onEnter onLEave onEnterBack onLeaveBack
         // options: play, pause, resume, reset, restart, complete, reverse, none
@@ -160,7 +156,7 @@ function useWindowSize() {
             
         <Link href="/" scroll={false}><a>
           <motion.img 
-          whileHover={{ opacity: 1, scale: 1.05, transition: { duration: .1, delay: 0, },}}
+          whileHover={{ opacity: 1, scale: 1.08, transition: { duration: .1, delay: 0, },}}
           whileTap={{ opacity: 0, }}
           initial={{ opacity: 0, x: '0.5em', y: '0.5em' }}
           animate={{ opacity: 0.8, x: '0em', y: '0em', transition: { duration: 1, delay: 0, }, }}
@@ -191,9 +187,9 @@ function useWindowSize() {
 
       </div>
 
-      {/* <section className="wrapper rhym"> */}
+      {/* <section className="show rhym"> */}
 
-      <section className="show rhym">
+      <section className="wrapper rhym">
 
         <span>
           <h5 className="reveal">Mission</h5>
