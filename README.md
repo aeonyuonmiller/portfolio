@@ -1,3 +1,3 @@
 ## Portfolio
 
-I'm a designer who is curious to code experiences infused with movement.
+I'm a designer who is curious to code.
