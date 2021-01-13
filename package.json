@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "framer-motion": "^2.9.4",
-    "gsap": "file:./gsap-bonus.tgz",
+    "gsap": "file:https://github.com/aeonyuonmiller/gsap-bonus/blob/main/gsap-bonus.tgz",
     "next": "^10.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
