@@ -1,3 +1,3 @@
 ## Portfolio
 
-aeonyuonmiller is a multidisciplinary digital designer, who is curious to design identities, code experiences and infuse movement.
+I'm a designer who is curious to code experiences infused with movement.
