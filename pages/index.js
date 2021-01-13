@@ -48,7 +48,6 @@ useEffect(() => {
 // HELPERS
    useEffect((innerWidth, innerHeight) => {
 
-    ScrollTrigger.refresh(true);
     var headlines = gsap.utils.toArray("h2, h3, h5, .arrow, .copy");
     headlines.forEach((elem, i) => {
   
@@ -69,6 +68,9 @@ useEffect(() => {
      .to(".arrow", { delay: 1.5 })
      .to(".copy", { delay: 1.5 });
     });
+
+    ScrollTrigger.refresh(true);
+
   }, [])
 
 
