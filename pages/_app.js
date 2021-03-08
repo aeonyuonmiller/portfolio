@@ -4,13 +4,14 @@ import '../styles/globals.css';
 import { AnimatePresence } from 'framer-motion';
 import dynamic from "next/dynamic";
 
-const Scroll = dynamic(
+ const Scroll = dynamic(
   () => {
     return import("../components/Scroll");
   },
   { ssr: false }
 );
 
+ 
 
 class MyApp extends App {
 

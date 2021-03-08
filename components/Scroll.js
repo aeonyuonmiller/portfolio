@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 export default function Scroll() {
   useEffect(function mount() {
     function onScroll() {
-      console.log("scroll!");
+      console.log("scrolling");
     }
 
     window.addEventListener("scroll", onScroll);

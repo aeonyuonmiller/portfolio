@@ -102,10 +102,59 @@ return windowSize;
 }
 
 
+// JAVASCRIPT-SNIPPET
+  useEffect(() => {
+    const tags = document.querySelectorAll("h2, p, h5, .intro, img, .text, .arrow, .copy")
+    const enterTag = document.querySelector("div")
+    
+    tags.forEach(tag => tag.style.opacity = 0)
+    tags.forEach(tag => tag.style.transform = "translateY(20px)")
+    
+    const fadeIn = function () {
+      let delay = 0.15
+      
+      tags.forEach(tag => {
+        const tagTop = tag.getBoundingClientRect().top
+        const tagBottom = tag.getBoundingClientRect().bottom
+    
+        if (tagTop < window.innerHeight && tagBottom > 0) {
+          tag.style.animation = `fadein .8s ${delay}s both`
+          delay = delay + 0.15
+        } else {
+          tag.style.animation = `fadeout .3s ${delay}s both`
+          tag.style.opacity = 0
+          tag.style.transform = "translateY(50px)"
+        }
+      })
+    }
+    
+    fadeIn()
+    
+    document.addEventListener("scroll", function () {
+      fadeIn()
+    })
+
+  })
+
+  // CURSOR
+useEffect(() => {
+  gsap.set('.follower', {xPercent:-50,yPercent:-50});
+  gsap.set('.cursor', {xPercent:-50,yPercent:-50});
+
+  var follow = document.querySelector('.follower');
+  var cur = document.querySelector('.cursor');
+
+  window.addEventListener('mousemove', e => {
+      gsap.to(cur, 0.2,{ x:e.clientX,y:e.clientY });
+      gsap.to(follow, 1,{ x:e.clientX,y:e.clientY });
+  })
+})
+
+
   /*  WORKING JS  */
 
   useEffect(() => {
-
+/*
     const reveal = gsap.utils.toArray('.reveal');
     reveal.forEach((text, i) => {
       ScrollTrigger.create({
@@ -116,7 +165,7 @@ return windowSize;
         // end: "top 5%"
       })
     })
-  
+
     const images = gsap.utils.toArray('img');
     images.forEach((img, i) => {
       ease: 'Power3.easeOut',
@@ -127,6 +176,7 @@ return windowSize;
         // end: "bottom 5%"
       }),150
     })
+    */
 
     const parallaxTl = gsap.timeline({
       ease: 'Power3.easeOut',
@@ -158,6 +208,9 @@ return windowSize;
         <meta name="description" content="Description goes here" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head> 
+
+      <div className="cursor"></div>
+      <div className="follower"></div>
 
 
       <div className="hero2 inh-hero" layout>
@@ -197,28 +250,79 @@ return windowSize;
 
 
 
-      <section className="show inh light">
+  <section className="inh">
+  <div className="wrapper-view">
+  
+    <span>
+      <h5>heyo</h5>
+      <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora aliquid quidem modi optio minus.
+      </p>
+    </span>
 
-        <span>
-          <h5>Mission</h5>
-          <p className="reveal">Give perspective on club culture from cultural workers.</p>
-        </span>
+    <div className="ganz">
+      <img src='/colors-inh.png' alt='' />
+    </div> 
+   
+    <span>
+      <h5>Lorem ipsum dolor sit amet</h5>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ab assumenda illum provident fugiat?</p>
+    </span>  
+   
+    <div className="zweier">
+      <img src='/videocall.gif' alt='' />
+    </div> 
+   
+    <div className="zweier rechts">
+     <img src='/transCard.gif' alt='interview split-screen' />
+    </div>
+ </div>
+ 
+ <div className="wrapper-view mt">
+   
+    <span>
+      <h5>heyo</h5>
+      <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora aliquid quidem modi optio minus, dolorum aspernatur tenetur voluptatibus! Rem a quasi voluptates aliquid velit!
+      </p>
+    </span>
+   
+    <span>
+      <h5>Amett amet</h5>
+      <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ducimus hic blanditiis quae quos?
+      </p>
+   </span>  
+   
+ <div className="zweier">
+    <img src='/beat-mode.png' alt='' />
+   </div>
+   
+   <div>
+      <h5>Client</h5>
+     <p>
+      Insert Name Here
+     </p>
+   </div>
+        
+    <div>
+      <h5>Position</h5>
+      <p>Art Director</p>
+    </div>
+        
+    <div>
+      <h5>Year</h5>
+      <p>2020</p>
+    </div>
+        
+    <div className="zweier rechts">
+      <img src='/inh.png' alt='' />
+      </div>
+    </div>
 
-        <img src="transCard.gif" style={{ width: '50%' }} alt="desc" />
-
-        <img src="videocall.gif" alt="desc" />
-
-        <span>
-          <h5>How</h5>
-          <p className="reveal">We talk about individual experiences to connect insight and emotions with ideas for possible change.​​​​​​​</p>
-        </span>
-
-        <img src="inh-title.gif" alt="desc" />
-
-      </section>
+  </section>
 
       <div className="footer">
-
           <span className="text align-left align-y-bottom">
           <h3>Let's work</h3>
           <a href="#" className="arrow"><img src="/arrow-link.svg" alt="Write e-mail" width="46px" />Mail</a>

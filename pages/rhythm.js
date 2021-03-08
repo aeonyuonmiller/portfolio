@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from "next/router";
@@ -56,7 +56,35 @@ const variants = {
 
 export default function RHYM() {
 
-/* // make gsap work smooth
+  // HELPERS
+  useEffect(() => {
+
+    var headlines = gsap.utils.toArray("h2, h3, h5, p, .copy");
+    headlines.forEach((elem, i) => {
+  
+    const tl = gsap.timeline({ 
+     scrollTrigger: {
+       trigger: elem,
+       // elem / viewport
+       start: "top 100%",
+       end: "center 0%",
+       // events: onEnter onLeave onEnterBack onLeaveBack
+       // options: play, pause, resume, reset, restart, complete, reverse, none
+       toggleActions: "restart reverse restart reverse"
+     }
+  });
+
+   tl.from(elem, { autoAlpha: 0, y: 30 })
+     .to(elem, { autoAlpha: 1, y: 0, duration: 0.2 })
+     .to(".arrow", { delay: 1.5 })
+     .to(".copy", { delay: 1.5 });
+    });
+
+    ScrollTrigger.refresh(true);
+
+  }, [])
+
+ /*// make gsap work smooth
   const handleScroll = () => {}
   useEffect(() => {
   window.addEventListener('scroll', handleScroll);
@@ -65,7 +93,7 @@ export default function RHYM() {
 
 
 // Resize Hook
-function useWindowSize() {
+ function useWindowSize() {
   
   const [windowSize, setWindowSize] = useState({
     width: undefined,
@@ -93,24 +121,13 @@ function useWindowSize() {
     }
   }, []); // Empty array ensures effect is only run on mount
   return windowSize;
-} */
+}  */
 
 
   /*  WORKING JS  */
 
 
   useEffect(() => {
-
-    const reveal = gsap.utils.toArray('.reveal');
-    reveal.forEach((text, i) => {
-        ease: 'Power3.easeOut',
-      ScrollTrigger.create({
-        trigger: text,
-        toggleClass: 'active',
-        clearProps: 'all',
-        start: "top 90%",
-      })
-    })
   
     const images = gsap.utils.toArray('img');
     images.forEach((img, i) => {
@@ -119,8 +136,8 @@ function useWindowSize() {
         trigger: img,
         toggleClass: 'active',
         start: "top 80%",
-      }),100
-    })
+      })
+    });
 
     const parallaxTl = gsap.timeline({
       ease: 'Power3.easeOut',
@@ -132,11 +149,11 @@ function useWindowSize() {
         // options: play, pause, resume, reset, restart, complete, reverse, none
         toggleActions: "restart none none reverse"
       }
-    })
+    });
       
     parallaxTl
-      .to('.hero-middle', { duration: 2, y: '+=500' })
-      .to('.back', {duration: 0.3, autoAlpha: 0, y: '-=30' }, 0);
+      .to('.hero-middle', { duration: 2, y: '50%' })
+      .to('.back', {duration: 0.3, autoAlpha: 0, y: '-30%' }, 0);
 
       ScrollTrigger.refresh();
 
@@ -159,7 +176,7 @@ function useWindowSize() {
           whileHover={{ opacity: 1, scale: 1.08, transition: { duration: .1, delay: 0, },}}
           whileTap={{ opacity: 0, }}
           initial={{ opacity: 0, x: '0.5em', y: '0.5em' }}
-          animate={{ opacity: 0.8, x: '0em', y: '0em', transition: { duration: 1, delay: 0, }, }}
+          animate={{ opacity: 0.8, x: '0em', y: '-5em', transition: { duration: 1, delay: 0, }, }}
           exit={{ x: '-10em', y: '-10em', opacity: 0, transition: { duration: .2, } }}
           src="arrow-back.svg" 
           className="back" />
